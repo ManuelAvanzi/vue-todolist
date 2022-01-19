@@ -6,3 +6,6 @@
 body{
     background-color: tan;
 }
+ul{
+    list-style: none;
+}

@@ -16,7 +16,17 @@
 </head>
 <body>
     
+    <div id="app">
 
+        <input v-model="temporaryItem" type="text">
+        <button @click="addItem" id="addButton">ADD</button>
+
+        <div class="list-container">
+            <ul>
+               <li v-for="item in todo">{{item}}</li>
+            </ul>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>

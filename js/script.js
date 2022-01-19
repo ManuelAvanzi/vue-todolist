@@ -2,16 +2,46 @@ new Vue ({
     el:"#app",
     data:{
         todo: [
-            'fare la spesa',
-            'fare i compiti',
-            'fare il bucato'
+            {
+                text: "primo elemento della lista",
+                done: true
+            },
+            {
+                text: "secondo elemento della lista",
+                done: false
+            },
+            {
+                text: "terzo elemento della lista",
+                done: false
+            },
+            {
+                text: "quarto elemento della lista",
+                done: true
+            },
+            {
+                text: "quinto elemento della lista",
+                done: false
+            },
+            {
+                text: "sesto elemento della lista",
+                done: true
+            },
+
+            
         ],
-        temporaryItem: '',
+        temporaryEl:'',
     },
     methods:{
-        addItem:function(){
-            this.todo.push(this.temporaryItem);
-            console.log(this.todo);
+        addElement:function(){
+           this.todo.push({
+               text:this.temporaryEl,
+               done:false,
+           })
+           this.temporaryEl='';
+        },
+        removeEl:function(i){
+            console.log("rimuovo l'elemento di indice",i);
+            this.todo.splice(i,1);
         }
     }
 })

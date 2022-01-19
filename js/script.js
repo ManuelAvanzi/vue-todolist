@@ -4,27 +4,27 @@ new Vue ({
         todo: [
             {
                 text: "primo elemento della lista",
-                done: true
+                done: true,
             },
             {
                 text: "secondo elemento della lista",
-                done: false
+                done: false,
             },
             {
                 text: "terzo elemento della lista",
-                done: false
+                done: false,
             },
             {
                 text: "quarto elemento della lista",
-                done: true
+                done: true,
             },
             {
                 text: "quinto elemento della lista",
-                done: false
+                done: false,
             },
             {
                 text: "sesto elemento della lista",
-                done: true
+                done: true,
             },
 
             
@@ -42,6 +42,11 @@ new Vue ({
         removeEl:function(i){
             console.log("rimuovo l'elemento di indice",i);
             this.todo.splice(i,1);
+        },
+
+        // aggiorno il data done=true/false
+        doneToggle:function(i){
+            this.todo[i].done=!this.todo[i].done;
         }
     }
 })

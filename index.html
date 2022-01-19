@@ -25,7 +25,7 @@
 
         <div class="list-container">
             <ul>
-                <li v-for="(el,i) in todo" :class="el.done ? 'done' : '' ">
+                <li v-for="(el,i) in todo" :class="el.done ? 'done' : '' " @click="toggleDone(i)">
                     {{el.text}}
 
                     <div @click="removeEl(i)"class="close">X</div>
